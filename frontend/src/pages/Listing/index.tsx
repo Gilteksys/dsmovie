@@ -28,12 +28,10 @@ function Listing() {
                    
                 </div>
             </div>
-            
-
-            
+          
         </>
         
-    )
+    );
 }
 
 export default Listing;

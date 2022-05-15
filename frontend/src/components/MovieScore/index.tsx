@@ -12,7 +12,7 @@ function MovieScore() {
             <MovieStars />
             <p className="dsmovie-score-count">{count} avaliações</p>
         </div>
-    )
+    );
 }
 
 export default MovieScore;
