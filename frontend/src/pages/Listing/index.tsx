@@ -19,25 +19,22 @@ function Listing() {
         first: true,
         numberOfElements: 0,
         empty: true
-    })
+    });
 
     useEffect(() => {
         axios.get(`${BASE_URL}/movies?size=12&page=${pageNumber}&sort=id`)
             .then(response => {
-                const date = response.data as MoviePage;
-                setPage(date);
-
+                const data = response.data as MoviePage;
+                setPage(data);
             });
-
     }, [pageNumber]);
-
 
     return (
         <>
 
             <Pagination />
 
-            <div className="container"  >
+            <div className="container">
                 <div className="row">
                     {page.content.map(movie => (
                         <div key={movie.id} className="col-sm-6 col-lg-4 col-xl-3 mb-3">
